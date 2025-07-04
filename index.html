@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizing Projectile Motion in Real-Time</title>
+    <link rel="shortcut icon" href="./catapult (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Visualizing Projectile Motion in Real-Time</h1>
+      <div class="inputs">
+      
+        <div class="input-group">
+          <label for="velocity">Initial Velocity (m/s)</label>
+          <input type="number" id="velocity" style="background-color: azure; color: black;"  value="20" min="1" step="1">
+        </div>
+        <div class="input-group">
+          <label for="angle">Angle (degrees)</label>
+          <input type="number" id="angle" style="background-color: azure; color: black;" value="45" min="0" max="90" step="1">
+        </div>
+        <div class="input-group">
+          <label for="height">Initial Height (m)</label>
+          <input type="number" id="height" style="background-color: azure; color: black;" value="0" min="0" step="1">
+        </div>
+        <div class="buttons">
+          <button id="launch" class="primary">Launch</button>
+          <button id="reset" style="background-color: #6666FF; color: rgb(248, 239, 239);">Reset</button>
+        </div>
+      </div>
+      <div class="simulation">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="results">
+        <div class="result-item">
+          <h3>Time of Flight</h3>
+          <p id="time">0.00 s</p>
+        </div>
+        <div class="result-item">
+          <h3>Maximum Height</h3>
+          <p id="max-height">0.00 m</p>
+        </div>
+        <div class="result-item">
+          <h3>Range</h3>
+          <p id="range">0.00 m</p>
+        </div>
+        <div class="result-item">
+          <h3>Final Velocity</h3>
+          <p id="final-velocity">0.00 m/s</p>
+        </div>
+      </div>
+    </div>
+    <script src="./check.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
