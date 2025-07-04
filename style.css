@@ -27,10 +27,11 @@ h1 {
   color: #6666FF;
   margin-bottom: 2rem;
 }
-
 .inputs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -38,53 +39,90 @@ h1 {
 .input-group {
   display: flex;
   flex-direction: column;
- }
+  width: 180px;
+}
 
 label {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
 }
 
 input {
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  background-color: #e9f9ff;
+  color: #000;
   font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6666ff;
+  box-shadow: 0 0 0 2px rgba(102, 102, 255, 0.2);
 }
 
 .buttons {
-  grid-column: 1 / -1;
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  gap: 0.8rem;
+  align-items: flex-end;
 }
 
 button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 6px;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button.primary {
-  background-color: #646cff;
+  background-color: #6666ff;
   color: white;
 }
 
 button.primary:hover {
-  background-color: #535bf2;
+  background-color: #5757e0;
+  transform: translateY(-2px);
 }
 
-button:not(.primary) {
-  background-color: #f9f9f9;
-  border-color: #ccc;
+#reset {
+  background-color: #4444dd;
+  color: white;
 }
 
-button:not(.primary):hover {
-  border-color: #646cff;
+#reset:hover {
+  background-color: #3b3bc4;
+  transform: translateY(-2px);
+}
+
+/* 🔁 Mobile Responsive */
+@media (max-width: 600px) {
+  .inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-group,
+  .buttons {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .buttons button {
+    width: 48%;
+  }
 }
 
 
