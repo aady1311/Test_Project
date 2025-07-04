@@ -7,6 +7,7 @@
   color: #213547;
 }
 
+
 body {
   margin: 0;
   min-width: 320px;
@@ -27,7 +28,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* .inputs {
+.inputs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
@@ -37,100 +38,54 @@ h1 {
 .input-group {
   display: flex;
   flex-direction: column;
-  padding-left: 40px;
- } */
+ }
 
- /* .inputs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px; /* spacing between input groups */
-  /* margin-bottom: 20px;
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-} */ 
-
-
-.inputs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1rem;
-  padding: 1rem;
-  max-width: 100%;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  width: 160px;
-}
-
-.input-group label {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-}
-
-.input-group input {
-  padding: .6rem 0.8rem;
+input {
+  padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #e9f9ff;
-  color: #000;
+  border-radius: 4px;
   font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.input-group input:focus {
-  outline: none;
-  border-color: #6666ff;
-  box-shadow: 0 0 0 2px rgba(102, 102, 255, 0.2);
 }
 
 .buttons {
+  grid-column: 1 / -1;
   display: flex;
-  gap: 0.8rem;
-  align-self: flex-end;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.buttons button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
   font-weight: 500;
-  border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s;
 }
 
-.buttons .primary {
-  background-color: #6666ff;
+button.primary {
+  background-color: #646cff;
   color: white;
 }
 
-.buttons .primary:hover {
-  background-color: #5757e0;
-  transform: translateY(-2px);
+button.primary:hover {
+  background-color: #535bf2;
 }
 
-#reset {
-  background-color: #4444dd;
-  color: white;
+button:not(.primary) {
+  background-color: #f9f9f9;
+  border-color: #ccc;
 }
 
-#reset:hover {
-  background-color: #3b3bc4;
-  transform: translateY(-2px);
+button:not(.primary):hover {
+  border-color: #646cff;
 }
-
 
 
 
