@@ -79,7 +79,7 @@ h1 {
 }
 
 .input-group input {
-  padding: 0.6rem 0.8rem;
+  padding: .6rem 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: #e9f9ff;
@@ -98,6 +98,7 @@ h1 {
 .buttons {
   display: flex;
   gap: 0.8rem;
+  align-self: flex-end;
 }
 
 .buttons button {
@@ -130,12 +131,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-.error {
-  color: red;
-  font-size: 0.8rem;
-  height: 16px;
-  margin-top: 2px;
-}
+
 
 
 /* 🔁 Only for small screens */
